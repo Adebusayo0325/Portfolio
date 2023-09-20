@@ -494,7 +494,7 @@ You can reach me below <a class = "tech-links" href= "#contact" > 👇 Contact <
 
     </section>
 
-    <section class="projects">
+    <section id="listener" class="projects">
              <div class="eco mentro">
 
 
@@ -518,9 +518,31 @@ You can reach me below <a class = "tech-links" href= "#contact" > 👇 Contact <
       </div>
             <div class="news">
 
-      <a href="#">  <h2>News Page</h2>
+      <a href="https://multi-step-form-by-ace.netlify.app/">  <h2>Multi-Step form </h2>
 </a>
-                <img src="./img/news Homepage.png" alt="news Page" />
+<div class="carousel">
+  <div class="slide">      
+    <img src="./img/Step 1.png" alt="Step 1" />
+</div>
+<div class="slide">
+        <img src="./img/Step 2.png" alt="Step 2" />
+
+</div>
+<div class="slide">
+        <img src="./img/Step 3.png" alt="Step 3" />
+
+</div>
+
+<div class="slide">
+      <img src="./img/Step 4.png" alt="Step 4" />
+
+</div>
+<div class="slide">
+      <img src="./img/Step 5.png" alt="Step 5" />
+
+</div>
+
+</div>
                 
       </div>
         <div class="bank">
@@ -530,6 +552,13 @@ You can reach me below <a class = "tech-links" href= "#contact" > 👇 Contact <
                 <img src="./img/EasyBank.png" alt="Sunnyside" />
       </div>
   
+       <div class="snap travelly">
+
+        <a href="https://snap-drop-down-page.netlify.app/"><h2>Snap Landing Page</h2> </a>
+
+                <img src="./img/Snap Landing Page PC view.png" alt="Snap Page" />
+      </div>
+
       <div class="parrot mentro">
 
         <a href="https://exoticbirdspage.netlify.app/"><h2>Parrot Landing Page</h2> </a>
@@ -537,12 +566,7 @@ You can reach me below <a class = "tech-links" href= "#contact" > 👇 Contact <
                 <img src="./img/Parrotpage.png" alt="Parrot Page" />
       </div>
 
-           <div class="snap travelly">
-
-        <a href="https://snap-drop-down-page.netlify.app/"><h2>Snap Landing Page</h2> </a>
-
-                <img src="./img/Snap Landing Page PC view.png" alt="Snap Page" />
-      </div>
+          
          <div class="card mentro">
 
         <a href="https://creditcard-detailsentrypage.netlify.app/"><h2>Credit Card Page</h2> </a>
@@ -724,5 +748,39 @@ function fixNav() {
 //
 
 }
+
+
+/* Carousel */
+
+const slideshow = document.querySelectorAll(".slide");
+
+slideshow.forEach((slide, indx) => {
+  slide.style.transform = `translateX(${indx * 320}px)`;
+});
+
+
+let viewingSlide = 0;
+let maxslide = slideshow.length - 1;
+
+function changeSlide (){
+
+  if (viewingSlide === maxslide) {
+    viewingSlide = 0;
+  } 
+
+
+    slideshow.forEach((slide, indx) => {
+      slide.style.transform = `translateX(${320 *(indx - viewingSlide)}px)`;
+  });
+            viewingSlide++;
+
+}
+
+
+  function changer(){
+ setInterval(() =>   changeSlide() , 3000)
+
+  }
+changer()
   </script>
 </html>

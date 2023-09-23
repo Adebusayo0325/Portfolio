@@ -12,6 +12,8 @@
     />
     <meta name="robots" content="index,follow" />
 <noscript>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
   <link
     rel="preload"
     as = "style"
@@ -105,6 +107,7 @@ body {
 <!-- <path d="M24 0C10.746 0 0 10.746 0 24C0 37.254 10.746 48 24 48C37.254 48 48 37.254 48 24C48 10.746 37.254 0 24 0ZM22 20.398L14.72 24L22 27.592V32L10 26.13V21.868L22 16V20.398ZM38 26.13L26 32V27.592L33.28 24L26 20.398V16L38 21.87V26.13Z" fill="#515151"/> -->
 <path d="M24 0C10.746 0 0 10.746 0 24C0 37.254 10.746 48 24 48C37.254 48 48 37.254 48 24C48 10.746 37.254 0 24 0ZM22 20.398L14.72 24L22 27.592V32L10 26.13V21.868L22 16V20.398ZM38 26.13L26 32V27.592L33.28 24L26 20.398V16L38 21.87V26.13Z" />
 </svg>
+          <!-- <h1>SyntaxX</h1> -->
           <h1>SyntaxX</h1>
         </div>
            
@@ -379,6 +382,26 @@ You can reach me below <a class = "tech-links" href= "#contact" > 👇 Contact <
       <h4><span class="dot">.</span>Skills</h4>
 
     </section>
+
+    <div class="box">
+<img src="icons/arrow-right-solid.svg" alt="arrow-right" id="icon">
+<div class="inner">    
+<div class="resume">
+        <h2>Resume: </h2>
+        <a href="img/Age.jpg" download>
+        <img class="myResume" src="img/Age.jpg" alt="resume">
+        <!-- <img class="file" src="icons/file-solid.svg" alt="file-icon"> -->
+        </a>
+      </div>
+      <div id="email" class="email">
+        <h2>Email:</h2>
+        <a href="mailto:adebusayoopeyemi@gmail.com">
+          <img src="icons/envelope-regular.svg" alt="envelope">
+        </a>
+      </div>
+</div>
+    </div>
+
     <section class="skills-section">
  <div class="lang" id="html">
   <div class="picture">
@@ -782,5 +805,29 @@ function changeSlide (){
 
   }
 changer()
+
+
+// Resume
+
+ const box = document.querySelector('.box');
+ const Inner = document.querySelector('.inner');
+ const Resume = document.querySelector('.resume');
+ const Email = document.querySelector('#email');
+const I = document.querySelector('#icon');
+       box.addEventListener("mouseenter", () => {
+         box.classList.add('show') 
+         Resume.style.display = "block"
+         Email.style.display = "block"
+         I.style.display = "none"
+         Inner.style.display = "flex"
+       });
+        
+         box.addEventListener("mouseleave", () => {
+           box.classList.remove('show');
+             Resume.style.display = "none"
+        Email.style.display = "none"
+                 Inner.style.display = "none"
+              I.style.display = "block"
+         });
   </script>
 </html>
